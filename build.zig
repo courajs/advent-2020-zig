@@ -29,5 +29,5 @@ pub fn build(b: *std.build.Builder) void {
     const test_step = b.step("test", "Run tests");
     test_step.dependOn(&t.step);
 
-    b.default_step = test_step;
+    b.default_step = run_step;
 }
